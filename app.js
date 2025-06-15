@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('guestbook-form');
     const messagesList = document.getElementById('messages-list');
-    const connectionString = process.env.COSMOS_DB_CONNECTION_STRING;
 
 
     // Fungsi untuk mengambil dan menampilkan pesan
