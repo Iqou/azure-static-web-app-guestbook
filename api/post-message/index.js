@@ -22,4 +22,7 @@ module.exports = async function (context, req) {
         status: 201, // Created
         body: newDocument
     };
+
+    console.log("Received request body:", req.body);
+
 };
