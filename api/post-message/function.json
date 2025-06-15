@@ -1,0 +1,25 @@
+{
+  "bindings": [
+    {
+      "authLevel": "anonymous",
+      "type": "httpTrigger",
+      "direction": "in",
+      "name": "req",
+      "methods": [ "post" ]
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "res"
+    },
+    {
+      "type": "cosmosDB",
+      "direction": "out",
+      "name": "outputDocument",
+      "databaseName": "GuestBookDB",
+      "collectionName": "Entries",
+      "createIfNotExists": false,
+      "connectionStringSetting": "COSMOS_DB_CONNECTION_STRING"
+    }
+  ]
+}

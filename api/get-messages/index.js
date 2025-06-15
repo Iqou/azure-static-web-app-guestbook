@@ -1,0 +1,9 @@
+module.exports = async function (context, req) {
+    // Berkat input binding, data dari Cosmos DB sudah tersedia di 'context.bindings.messages'.
+    const messages = context.bindings.messages;
+
+    context.res = {
+        // status: 200, /* Defaults to 200 */
+        body: messages || [] // Kirim array kosong jika tidak ada pesan
+    };
+};
