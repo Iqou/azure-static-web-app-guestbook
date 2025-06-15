@@ -1,4 +1,5 @@
 module.exports = async function (context, req) {
+    const connectionString = process.env.COSMOS_DB_CONNECTION_STRING;
     // Berkat input binding, data dari Cosmos DB sudah tersedia di 'context.bindings.messages'.
     const messages = context.bindings.messages;
 

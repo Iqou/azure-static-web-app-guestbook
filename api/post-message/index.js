@@ -1,4 +1,5 @@
 module.exports = async function (context, req) {
+    const connectionString = process.env.COSMOS_DB_CONNECTION_STRING;
     const { name, message } = req.body;
 
     if (!name || !message) {
