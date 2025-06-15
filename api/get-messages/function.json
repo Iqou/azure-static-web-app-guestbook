@@ -5,12 +5,21 @@
       "type": "httpTrigger",
       "direction": "in",
       "name": "req",
-      "methods": ["get"]
+      "methods": [ "get" ]
     },
     {
       "type": "http",
       "direction": "out",
       "name": "res"
+    },
+    {
+      "type": "cosmosDB",
+      "direction": "in",
+      "name": "messages",
+      "databaseName": "GuestBookDB",
+      "collectionName": "Entries",
+      "connectionStringSetting": "COSMOS_DB_CONNECTION_STRING",
+      "sqlQuery": "SELECT * from c ORDER BY c._ts DESC"
     }
   ]
 }
